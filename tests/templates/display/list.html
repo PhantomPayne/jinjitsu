@@ -1,0 +1,20 @@
+{{property}}
+{{properties}}
+<table>
+    <thead>
+        <tr>
+        {% for property in properties %}
+            <th>{{property}}</th>
+        {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in obj %}
+            <tr>
+                {% for property in properties %}
+                    <td>{{item[property]}}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
